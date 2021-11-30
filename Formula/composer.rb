@@ -19,7 +19,7 @@ class Composer < Formula
       sha256 cellar: :any_skip_relocation, x86_64_linux:   "2a5935135030a1c5c160274179271a78961f9e2dcac93d97bfe6a9633368ed6f"
     end
   
-    depends_on "shivammatur/php"
+    depends_on "shivammathur/php/php"
   
     # Keg-relocation breaks the formula when it replaces `/usr/local` with a non-default prefix
     on_macos do
