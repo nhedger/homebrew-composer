@@ -5,7 +5,12 @@ composer that depends on shivammathur/php instead of php
 from homebrew/core.
 
 ```shell
-    brew tap nhedger/composer
+# Add tap
+brew tap nhedger/composer
 
-    brew install nhedger/composer/composer
+# Update homebrew
+brew update
+
+# Install composer
+brew install nhedger/composer/composer
 ```
