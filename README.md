@@ -1,7 +1,7 @@
 # Homebrew Composer
 
-This repository contains a homebrew formula for installing
-composer that depends on shivammathur/php instead of php
+This repository contains a Homebrew formula for installing
+[Composer](https://getcomposer.org) that depends on [shivammathur/php](https://github.com/shivammathur/homebrew-php) instead of php
 from homebrew/core.
 
 ```shell
