@@ -1,3 +1,5 @@
+name: Synchronize with homebrew/core
+
 on:
   workflow_dispatch:
   schedule:
