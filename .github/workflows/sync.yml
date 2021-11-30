@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@master
 
       - name: Download latest formula
-        run: wget https://raw.githubusercontent.com/Homebrew/homebrew-core/HEAD/Formula/composer.rb
+        run: wget https://raw.githubusercontent.com/Homebrew/homebrew-core/HEAD/Formula/composer.rb -O /tmp/composer.rb
 
       - name: Replace dependency
-        run: sed -i 's|depends_on "php"|depends_on "shivammathur/php/php"|g' composer.rb
+        run: cat /tmp/composer.rb | sed 's|depends_on "php"|depends_on "shivammathur/php/php"|g' > ./Formula/composer.rb
       
       - name: Publish changes
         uses: EndBug/add-and-commit@v7
