@@ -1,0 +1,25 @@
+on:
+  workflow_dispatch:
+  schedule:
+    # Every 12 hours
+    cron: 0 */12 * * *
+
+jobs:
+  update_formula:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Download latest formula
+        run: wget https://raw.githubusercontent.com/Homebrew/homebrew-core/HEAD/Formula/composer.rb
+
+      - name: Replace dependency
+        run: sed -i 's|depends_on "php"|depends_on "shivammathur/php/php"|g' composer.rb
+      
+      - name: Publish changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          committer_name: Homebrew Sync
+          message: Update formula to latest version
