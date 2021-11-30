@@ -14,3 +14,8 @@ brew update
 # Install composer
 brew install nhedger/composer/composer
 ```
+
+## Sync
+
+This formula is kept in sync with the [composer formula in homebrew/core](https://formulae.brew.sh/formula/composer)
+using a GitHub Actions workflow triggered every 12 hours.
